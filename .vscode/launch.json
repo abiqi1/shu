@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "name": "Shu (Chrome)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "deviceId": "chrome",
+    },
+    {
+      "name": "Shu (iOS Simulator)",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "397A6366-0CBB-4163-BB9C-0F3D2FD05CAB"
+    },
+    {
+      "name": "Shu (iOS Simulator) -- profile",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "397A6366-0CBB-4163-BB9C-0F3D2FD05CAB",
+      "flutterMode": "profile"
+    }
+  ]
+}
