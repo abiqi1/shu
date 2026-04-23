@@ -1,6 +1,6 @@
 # Shu
 
-A Flutter fashion e-commerce application for browsing and purchasing clothing — including Abayas, Gowns, and Occasion Wear.
+A Flutter fashion e-commerce application for browsing and purchasing clothing.
 
 ## Features
 
