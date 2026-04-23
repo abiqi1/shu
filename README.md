@@ -1,4 +1,4 @@
-# clothing_app
+# Shu
 
 A new Flutter project.
 
