@@ -1,4 +1,4 @@
-import 'package:clothing_app/features/catalogue/models/product.dart';
+import 'package:shu/features/catalogue/models/product.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'catalogue_provider.g.dart';

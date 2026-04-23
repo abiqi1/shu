@@ -1,5 +1,5 @@
-import 'package:clothing_app/features/catalogue/pages/catelogue_page.dart';
-import 'package:clothing_app/features/home/pages/home_page.dart';
+import 'package:shu/features/catalogue/pages/catelogue_page.dart';
+import 'package:shu/features/home/pages/home_page.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 

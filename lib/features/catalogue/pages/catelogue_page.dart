@@ -1,10 +1,10 @@
-import 'package:clothing_app/core/design_system/app_theme.dart';
-import 'package:clothing_app/core/widgets/app_shell.dart';
+import 'package:shu/core/design_system/app_theme.dart';
+import 'package:shu/core/widgets/app_shell.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:clothing_app/features/catalogue/providers/selected_category_provider.dart';
-import 'package:clothing_app/features/catalogue/providers/catalogue_provider.dart';
-import 'package:clothing_app/core/widgets/product_card.dart';
+import 'package:shu/features/catalogue/providers/selected_category_provider.dart';
+import 'package:shu/features/catalogue/providers/catalogue_provider.dart';
+import 'package:shu/core/widgets/product_card.dart';
 
 class CataloguePage extends ConsumerWidget {
   const CataloguePage({super.key});

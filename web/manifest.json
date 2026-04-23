@@ -1,6 +1,6 @@
 {
-    "name": "clothing_app",
-    "short_name": "clothing_app",
+    "name": "shu",
+    "short_name": "shu",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -1,4 +1,4 @@
-import 'package:clothing_app/core/design_system/app_theme.dart';
+import 'package:shu/core/design_system/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

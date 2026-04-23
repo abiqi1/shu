@@ -1,5 +1,5 @@
-import 'package:clothing_app/core/design_system/app_theme.dart';
-import 'package:clothing_app/core/widgets/store_button.dart';
+import 'package:shu/core/design_system/app_theme.dart';
+import 'package:shu/core/widgets/store_button.dart';
 import 'package:flutter/material.dart';
 
 class ProductCard extends StatelessWidget {

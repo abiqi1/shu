@@ -1,5 +1,5 @@
-import 'package:clothing_app/features/cart/models/cart_item.dart';
-import 'package:clothing_app/features/catalogue/models/product.dart';
+import 'package:shu/features/cart/models/cart_item.dart';
+import 'package:shu/features/catalogue/models/product.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'cart_provider.g.dart';

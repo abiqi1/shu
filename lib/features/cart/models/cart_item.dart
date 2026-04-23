@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:clothing_app/features/catalogue/models/product.dart';
+import 'package:shu/features/catalogue/models/product.dart';
 
 part 'cart_item.freezed.dart';
 
