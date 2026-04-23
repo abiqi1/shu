@@ -17,16 +17,16 @@ List<Product> catalogue(CatalogueRef ref) {
     ),
     const Product(
       id: 2,
-      title: 'Red Abaya',
-      category: 'Abayas',
+      title: 'Red Gown',
+      category: 'Gowns',
       imageUrl:
           'https://pamellaroland.com/cdn/shop/files/Pamella_Roland_S26_look_36.jpg?v=1758645706',
       price: 59.99,
     ),
     const Product(
       id: 3,
-      title: 'Cosmic Abaya',
-      category: 'Abayas',
+      title: 'Cosmic Dress',
+      category: 'OccasionWear',
       imageUrl:
           'https://pamellaroland.com/cdn/shop/files/Pamella_Roland_S26_look_35.jpg?v=1758645707',
       price: 119.99,

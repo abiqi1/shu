@@ -32,16 +32,19 @@ class AppTheme {
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: secondary,
-          foregroundColor: textPrimary,
-          padding: const EdgeInsets.symmetric(vertical: paddingMedium),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8.0),
+          backgroundColor: AppTheme.textPrimary, // black fill
+          foregroundColor: AppTheme.background, // white text
+          elevation: 0, // no shadow
+          shadowColor: Colors.transparent,
+          padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 18),
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.zero, // sharp corners
           ),
           textStyle: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
+            fontSize: 12,
+            fontWeight: FontWeight.w500,
             fontFamily: 'Inter',
+            letterSpacing: 2.5, // wide spacing
           ),
         ),
       ),

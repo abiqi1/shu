@@ -1,3 +1,4 @@
+import 'package:clothing_app/features/catalogue/pages/catelogue_page.dart';
 import 'package:clothing_app/features/home/pages/home_page.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -10,10 +11,10 @@ GoRouter appRouter(AppRouterRef ref) {
     initialLocation: '/',
     routes: [
       GoRoute(path: '/', builder: (context, state) => const HomePage()),
-      //   GoRoute(
-      //     path: '/catalogue',
-      //     builder: (context, state) => const CataloguePage(),
-      //   ),
+      GoRoute(
+        path: '/catalogue',
+        builder: (context, state) => const CataloguePage(),
+      ),
       //   GoRoute(
       //     path: '/product/:id',
       //     builder: (context, state) {
