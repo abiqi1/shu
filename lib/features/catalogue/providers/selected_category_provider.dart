@@ -5,7 +5,7 @@ part 'selected_category_provider.g.dart';
 @riverpod
 class SelectedCategory extends _$SelectedCategory {
   @override
-  String build() => 'ALL';
+  String build() => 'all';
 
   void select(String category) {
     state = category;

@@ -29,35 +29,35 @@ class CataloguePage extends ConsumerWidget {
                 child: Row(
                   children: [
                     _FilterTab(
-                      label: 'ALL',
-                      isSelected: selectedCategory == 'ALL',
+                      label: 'all',
+                      isSelected: selectedCategory == 'all',
                       onTap: () => ref
                           .read(selectedCategoryProvider.notifier)
-                          .select('ALL'),
+                          .select('all'),
                     ),
                     const SizedBox(width: AppTheme.paddingLarge),
                     _FilterTab(
-                      label: 'ABAYAS',
-                      isSelected: selectedCategory == 'ABAYAS',
+                      label: 'abayas',
+                      isSelected: selectedCategory == 'abayas',
                       onTap: () => ref
                           .read(selectedCategoryProvider.notifier)
-                          .select('ABAYAS'),
+                          .select('abayas'),
                     ),
                     const SizedBox(width: AppTheme.paddingLarge),
                     _FilterTab(
-                      label: 'GOWNS',
-                      isSelected: selectedCategory == 'GOWNS',
+                      label: 'gowns',
+                      isSelected: selectedCategory == 'gowns',
                       onTap: () => ref
                           .read(selectedCategoryProvider.notifier)
-                          .select('GOWNS'),
+                          .select('gowns'),
                     ),
                     const SizedBox(width: AppTheme.paddingLarge),
                     _FilterTab(
-                      label: 'OCCASIONWEAR',
-                      isSelected: selectedCategory == 'OCCASIONWEAR',
+                      label: 'occasionwear',
+                      isSelected: selectedCategory == 'occasionwear',
                       onTap: () => ref
                           .read(selectedCategoryProvider.notifier)
-                          .select('OCCASIONWEAR'),
+                          .select('occasionwear'),
                     ),
                   ],
                 ),
@@ -76,6 +76,13 @@ class CataloguePage extends ConsumerWidget {
                         : width > 600
                         ? 2
                         : 1;
+                    final allProducts = ref.watch(catalogueProvider);
+                    final filteredProducts = selectedCategory == 'all'
+                        ? allProducts
+                        : allProducts
+                              .where((p) => p.category == selectedCategory)
+                              .toList();
+
                     return GridView.builder(
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: columns,
@@ -83,9 +90,9 @@ class CataloguePage extends ConsumerWidget {
                         mainAxisSpacing: AppTheme.paddingMedium,
                         childAspectRatio: 0.50,
                       ),
-                      itemCount: ref.watch(catalogueProvider).length,
+                      itemCount: filteredProducts.length,
                       itemBuilder: (context, index) {
-                        final product = ref.watch(catalogueProvider)[index];
+                        final product = filteredProducts[index];
                         return GestureDetector(
                           onTap: () => context.go('/product/${product.id}'),
                           child: ProductCard(
@@ -134,7 +141,7 @@ class _FilterTab extends StatelessWidget {
           ),
         ),
         child: Text(
-          label,
+          label.toUpperCase(),
           style: Theme.of(context).textTheme.bodyMedium?.copyWith(
             color: isSelected
                 ? AppTheme.textPrimary
