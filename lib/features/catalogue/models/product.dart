@@ -10,6 +10,7 @@ abstract class Product with _$Product {
     required String category,
     required String imageUrl,
     required double price,
+    required String description,
   }) = _Product;
 
   factory Product.fromJson(Map<String, dynamic> json) =>

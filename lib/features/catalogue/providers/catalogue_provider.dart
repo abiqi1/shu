@@ -14,6 +14,7 @@ List<Product> catalogue(CatalogueRef ref) {
       imageUrl:
           'https://pamellaroland.com/cdn/shop/files/Pamella_Roland_S26_look_20.jpg?v=1758645706',
       price: 29.99,
+      description: 'A beautiful green abaya perfect for any occasion.',
     ),
     const Product(
       id: 2,
@@ -22,6 +23,7 @@ List<Product> catalogue(CatalogueRef ref) {
       imageUrl:
           'https://pamellaroland.com/cdn/shop/files/Pamella_Roland_S26_look_36.jpg?v=1758645706',
       price: 59.99,
+      description: 'An elegant red gown that will make you stand out.',
     ),
     const Product(
       id: 3,
@@ -30,6 +32,7 @@ List<Product> catalogue(CatalogueRef ref) {
       imageUrl:
           'https://pamellaroland.com/cdn/shop/files/Pamella_Roland_S26_look_35.jpg?v=1758645707',
       price: 119.99,
+      description: 'A stunning cosmic dress that is out of this world.',
     ),
   ];
 }

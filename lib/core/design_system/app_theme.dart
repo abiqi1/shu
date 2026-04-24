@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   static const Color primary = Color.fromARGB(255, 255, 232, 212);
-  static const Color secondary = Color.fromARGB(255, 235, 210, 190);
   static const Color background = Color.fromARGB(255, 255, 255, 255);
   static const Color textPrimary = Color.fromARGB(255, 0, 0, 0);
   static const Color surface = Color.fromARGB(255, 255, 255, 255);
@@ -15,17 +14,25 @@ class AppTheme {
     return ThemeData(
       primaryColor: primary,
       scaffoldBackgroundColor: background,
-      colorScheme: const ColorScheme.light(
-        primary: primary,
-        secondary: secondary,
-        surface: surface,
-      ),
+      colorScheme: const ColorScheme.light(primary: primary, surface: surface),
       fontFamily: 'Inter',
       textTheme: const TextTheme(
         displayLarge: TextStyle(
           fontSize: 32,
           fontWeight: FontWeight.bold,
           color: textPrimary,
+        ),
+        headlineMedium: TextStyle(
+          fontSize: 28,
+          fontWeight: FontWeight.w300,
+          color: textPrimary,
+          letterSpacing: 1.5,
+        ),
+        headlineSmall: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.w300,
+          color: textPrimary,
+          letterSpacing: 1.2,
         ),
         bodyLarge: TextStyle(fontSize: 16, color: textPrimary),
         bodyMedium: TextStyle(fontSize: 14, color: textPrimary),

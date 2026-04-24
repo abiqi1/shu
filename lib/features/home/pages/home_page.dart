@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
               ),
               const SizedBox(height: AppTheme.paddingLarge),
               Text(
-                'Welcome to Shu',
+                'WELCOME TO SHU',
                 style: Theme.of(context).textTheme.displayLarge,
                 textAlign: TextAlign.center,
               ),

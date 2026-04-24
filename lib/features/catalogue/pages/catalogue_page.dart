@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shu/features/catalogue/providers/selected_category_provider.dart';
 import 'package:shu/features/catalogue/providers/catalogue_provider.dart';
-import 'package:shu/core/widgets/product_card.dart';
+import 'package:shu/features/catalogue/widgets/product_card.dart';
+import 'package:go_router/go_router.dart';
 
 class CataloguePage extends ConsumerWidget {
   const CataloguePage({super.key});
@@ -85,12 +86,15 @@ class CataloguePage extends ConsumerWidget {
                       itemCount: ref.watch(catalogueProvider).length,
                       itemBuilder: (context, index) {
                         final product = ref.watch(catalogueProvider)[index];
-                        return ProductCard(
-                          imageUrl: product.imageUrl,
-                          title: product.title,
-                          category: product.category,
-                          price: product.price,
-                          onAddToCart: () {},
+                        return GestureDetector(
+                          onTap: () => context.go('/product/${product.id}'),
+                          child: ProductCard(
+                            imageUrl: product.imageUrl,
+                            title: product.title,
+                            category: product.category,
+                            price: product.price,
+                            onAddToCart: () {},
+                          ),
                         );
                       },
                     );

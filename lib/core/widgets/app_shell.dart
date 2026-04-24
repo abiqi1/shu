@@ -34,7 +34,7 @@ class _NavBar extends StatelessWidget {
         vertical: AppTheme.paddingMedium,
       ),
       decoration: const BoxDecoration(
-        border: Border(bottom: BorderSide(color: AppTheme.secondary)),
+        border: Border(bottom: BorderSide(color: AppTheme.textPrimary)),
       ),
       child: Row(
         children: [

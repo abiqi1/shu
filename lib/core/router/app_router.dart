@@ -1,4 +1,5 @@
-import 'package:shu/features/catalogue/pages/catelogue_page.dart';
+import 'package:shu/features/catalogue/pages/catalogue_page.dart';
+import 'package:shu/features/catalogue/pages/prouduct_page.dart';
 import 'package:shu/features/home/pages/home_page.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -15,13 +16,13 @@ GoRouter appRouter(AppRouterRef ref) {
         path: '/catalogue',
         builder: (context, state) => const CataloguePage(),
       ),
-      //   GoRoute(
-      //     path: '/product/:id',
-      //     builder: (context, state) {
-      //       final id = int.parse(state.pathParameters['id']!);
-      //       return ProductDetailPage(productId: id);
-      //     },
-      //   ),
+      GoRoute(
+        path: '/product/:id',
+        builder: (context, state) {
+          final id = int.tryParse(state.pathParameters['id'] ?? '') ?? 0;
+          return ProuductPage(productId: id);
+        },
+      ),
       //   GoRoute(path: '/cart', builder: (context, state) => const CartPage()),
     ],
   );
